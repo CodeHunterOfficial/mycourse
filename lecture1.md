@@ -1,9 +1,9 @@
-# Лекция 1. Введение в машинное обучение
+# Lecture 1. Introduction to Machine Learning
 
-Машинное обучение (ML) — это область искусственного интеллекта, 
-которая позволяет компьютерам обучаться на данных.
+Machine Learning (ML) is a field of artificial intelligence  
+that allows computers to learn from data.
 
-## Основные направления
-- Обучение с учителем
-- Обучение без учителя
-- Обучение с подкреплением
+## Main Areas
+- Supervised Learning
+- Unsupervised Learning
+- Reinforcement Learning
