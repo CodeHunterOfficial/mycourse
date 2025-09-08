@@ -7,3 +7,4 @@ Here you will find comprehensive lecture notes and interactive Jupyter notebooks
 
 - [Lecture 1: Introduction to Machine Learning](lecture1.md)
 - [Notebook 1: Simple Data Visualization](notebook1.ipynb)
+- [Notebook 2: Introduction](notebook2.ipynb)
