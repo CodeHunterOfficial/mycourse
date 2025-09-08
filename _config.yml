@@ -1,0 +1,16 @@
+# Основные настройки
+title: "Курс по машинному обучению"
+author: "Арабов Муллошараф"
+logo: ""
+
+# HTML-опции
+html:
+  favicon: ""
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+repository:
+  url: https://github.com/username/mycourse
+  branch: main
+  path_to_book: ""
