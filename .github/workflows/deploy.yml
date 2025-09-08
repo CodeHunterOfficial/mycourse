@@ -1,40 +1,40 @@
 name: Deploy Jupyter Book to GitHub Pages
 
-# Trigger the workflow on every push to the 'main' branch
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Важно! Дает разрешение на запись в ветку gh-pages
 
     steps:
-      # Step 1: Checkout the repository code
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      # Step 2: Set up the required Python version
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
 
-      # Step 3: Install core dependencies for building the book
-      - name: Install Jupyter Book and Deployment Tool
-        run: |
-          pip install --upgrade jupyter-book ghp-import
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install jupyter-book ghp-import
+        # Явно устанавливаем все зависимости для ноутбуков
+        pip install numpy matplotlib
 
-      # Step 4: Install library dependencies for your notebooks (e.g., NumPy, Matplotlib)
-      - name: Install Data Science Libraries
-        run: |
-          pip install numpy matplotlib
+    - name: Build Jupyter Book
+      run: |
+        jupyter-book build --keep-going --all . 2>&1 | tee build.log
+        # Опция --all обрабатывает все ноутбуки, tee сохраняет лог
 
-      # Step 5: Build the book, but don't fail the workflow on warnings
-      - name: Build the Jupyter Book
-        run: jupyter-book build --keep-going .
+    - name: Show build log (for debugging)
+      run: |
+        cat build.log
 
-      # Step 6: Deploy the built HTML files to the 'gh-pages' branch
-      - name: Deploy to GitHub Pages
-        run: ghp-import --no-jekyll --push --force _build/html
+    - name: Deploy to GitHub Pages
+      run: |
+        ghp-import --no-jekyll --push --force _build/html
