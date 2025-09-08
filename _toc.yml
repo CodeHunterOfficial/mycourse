@@ -1,5 +1,7 @@
+# Table of contents definition
 format: jb-book
-root: intro
+root: intro # The introductory page
+
 chapters:
-  - file: lecture1
-  - file: notebook1
+  - file: lecture1 # First chapter: Lecture 1
+  - file: notebook1 # Second chapter: Example Notebook

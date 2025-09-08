@@ -1,16 +1,18 @@
-# Main settings
-title: "ML"
+# Book configuration
+title: "Introduction to Machine Learning"
 author: "Arabov Mullosharaf"
-logo: ""
+logo: "logo.png" # Optional: add a path to your logo image if you have one
 
-# HTML options
-html:
-  favicon: ""
-  use_repository_button: true
-  use_issues_button: true
-  use_edit_page_button: true
-
+# Repository information for interactive buttons (Edit, View Source, etc.)
 repository:
-  url: https://github.com/username/mycourse
+  url: https://github.com/CodeHunterOfficial/mycourse # <<< CHANGE THIS >>>
   branch: main
-  path_to_book: ""
+  path_to_book: "" # Leave empty if book is in the root directory
+
+# Output configuration for HTML
+html:
+  favicon: "" # Optional: path to a favicon
+  use_repository_button: true # Show a link to your repository
+  use_issues_button: true # Show a button to report an issue
+  use_edit_page_button: true # Show a button to suggest an edit
+  use_download_button: true # Show a button to download the page as PDF

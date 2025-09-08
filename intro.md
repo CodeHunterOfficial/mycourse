@@ -1,7 +1,9 @@
-# Welcome
+# Welcome to the Machine Learning Course
 
-This is an educational course website created using **Jupyter Book**.  
-Here you will find lecture notes and interactive materials.
+This is an educational website built with **Jupyter Book**.
+Here you will find comprehensive lecture notes and interactive Jupyter notebooks.
 
-- [Lecture 1](lecture1.md)  
-- [Example Notebook](notebook1.ipynb)  
+## Content Overview
+
+- [Lecture 1: Introduction to Machine Learning](lecture1.md)
+- [Notebook 1: Simple Data Visualization](notebook1.ipynb)
