@@ -1,9 +1,9 @@
-# Основные настройки
-title: "Курс по машинному обучению"
-author: "Арабов Муллошараф"
+# Main settings
+title: "ML"
+author: "Arabov Mullosharaf"
 logo: ""
 
-# HTML-опции
+# HTML options
 html:
   favicon: ""
   use_repository_button: true
